@@ -3,27 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
-{   
-    Transform transform;
-
+{
     // Varibales para la velocidad del jugador
-    public float velocidadLateral = 0.001f;
-    public float velocidadVertical = 0.001f;
-    Rigidbody rb2d;
+    public float velocidadHorizontal = 0.01f;
+    public float velocidadVertical = 0.01f;
+    Rigidbody2D rb;
     void Start()
-    {
-        transform = GetComponent<Transform>();
+    {   
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
-    {
-        movimiento();
+    {   
+        float inputMovimientoHorizontal = Input.GetAxis("Horizontal");
+        float inputMovimientoVertical = Input.GetAxis("Vertical");
+
+        movimientoLateral(inputMovimientoHorizontal);
     }
 
-    void movimiento() {
-        Vector2 position = transform.position;
-        position.x = position.x + Input.GetAxis("Horizontal") * velocidadLateral;
-        position.y = position.y + Input.GetAxis("Vertical") * velocidadVertical;
-        transform.position = position;
+    void movimientoLateral(float movHorizontal) {
+        rb.velocity = new Vector2(movHorizontal * velocidadHorizontal, rb.velocity.y);
     }
 }
