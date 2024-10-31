@@ -25,10 +25,13 @@ public class PlayerScript : MonoBehaviour
         float inputMovimientoHorizontal = Input.GetAxis("Horizontal");
         float inputMovimientoVertical = Input.GetAxis("Vertical");
 
+        // MOVIMIENTO
         movimientoLateral(inputMovimientoHorizontal);
         salto();
+        gestionarGiro(inputMovimientoHorizontal);
     }
 
+    // -------------------------- MOVIMIENTO INICIO --------------------------
     void movimientoLateral(float movHorizontal) {
         rb.velocity = new Vector2(movHorizontal * velocidadHorizontal, rb.velocity.y);
     }
@@ -43,10 +46,26 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    void gestionarGiro(float inputMovimiento) {
+        // SI el personaje se esta moviendo a la derecha
+        if (inputMovimiento > 0) {
+            transform.localScale = new Vector3(1, 1, 1); // Escala normal en X
+        }
+        // Si el personaje se está moviendo a la izquierda
+        else if (inputMovimiento < 0) {
+            transform.localScale = new Vector3(-1, 1, 1); // Invertir la escala en X
+        // Si está quiero se quedará en la última posición asignada
+        }
+    }
+    // -------------------------- MOVIMIENTO FINAL --------------------------
 
+
+
+    // -------------------------- GIZMOS INICIO --------------------------
     //Metodo para visualizar el Raycast en la escena (opcional)
     void OnDrawGizmos(){
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * rayLength);
     }
+    // -------------------------- GIZMOS FINAL --------------------------
 }
