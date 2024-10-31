@@ -40,8 +40,7 @@ public class PlayerScript : MonoBehaviour
         gestionarGiro(inputMovimientoHorizontal);
     }
 
-    void verificarSuelo()
-    {
+    void verificarSuelo() {
         // Posición desde donde lanzo el raycast hacia abajo
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, Suelo);
         // Si el hit.collider es null, no detecta nada por ende no esta en el suelo
@@ -80,7 +79,7 @@ public class PlayerScript : MonoBehaviour
     // -------------------------- MOVIMIENTO FINAL --------------------------
 
     // -------------------------- GIZMOS INICIO --------------------------
-    void OnDrawGizmos(){
+    void OnDrawGizmos() {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * rayLength);
     }

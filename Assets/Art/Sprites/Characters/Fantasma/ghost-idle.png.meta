@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b76baf2bf83f2c042b081261123e9c6b
+guid: 24c432bd5257cc848bca187f2c56efbb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,34 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EsqMuertoSaliendo_0
+      name: ghost-idle_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 0
-        width: 11
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eee01a6a6113e084db22ffc3a58329ad
-      internalID: 1244596547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EsqMuertoSaliendo_1
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 0
+        x: 20
+        y: 19
         width: 24
-        height: 13
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2ad05d3c559e4248a6321325ac47a52
-      internalID: 1088894675
+      spriteID: 8067f05b6b3eada4f9a83e6c97b56261
+      internalID: 1857327356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EsqMuertoSaliendo_2
+      name: ghost-idle_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 0
+        x: 82
+        y: 18
         width: 28
-        height: 19
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcb2b346ee803f74dbe20c939d83a526
-      internalID: -970400387
+      spriteID: 995aef9402d9e5d43810278c2943b698
+      internalID: -440047064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EsqMuertoSaliendo_3
+      name: ghost-idle_2
       rect:
         serializedVersion: 2
-        x: 140
-        y: 0
+        x: 147
+        y: 16
         width: 26
-        height: 28
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,19 +166,82 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b6e61911447eee4b8cf593fb5097be7
-      internalID: -149965393
+      spriteID: ecc53bfb4dca915458f3cd483194b754
+      internalID: -111283168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EsqMuertoSaliendo_4
+      name: ghost-idle_3
       rect:
         serializedVersion: 2
-        x: 184
-        y: 0
-        width: 27
+        x: 212
+        y: 15
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c202c74e85011a45a504fd3aacadadf
+      internalID: 529953863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghost-idle_4
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 14
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0737c5c0b41a95f4da3bb7bbabc7faf5
+      internalID: 1832931280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghost-idle_5
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 15
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5669c360aab5864d96c20d6b1e3eb7a
+      internalID: -7120179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ghost-idle_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 17
+        width: 25
         height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -208,29 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44b440b788299ab458c50286a9b2777e
-      internalID: 543882927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: EsqMuertoSaliendo_5
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 0
-        width: 32
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b7a0f8de3192e24cbc54c7ac3697efb
-      internalID: 739868080
+      spriteID: 1fd8d4de772a4884790ad623ea99cc92
+      internalID: -893029633
       vertices: []
       indices: 
       edges: []
@@ -246,12 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EsqMuertoSaliendo_0: 1244596547
-      EsqMuertoSaliendo_1: 1088894675
-      EsqMuertoSaliendo_2: -970400387
-      EsqMuertoSaliendo_3: -149965393
-      EsqMuertoSaliendo_4: 543882927
-      EsqMuertoSaliendo_5: 739868080
+      ghost-idle_0: 1857327356
+      ghost-idle_1: -440047064
+      ghost-idle_2: -111283168
+      ghost-idle_3: 529953863
+      ghost-idle_4: 1832931280
+      ghost-idle_5: -7120179
+      ghost-idle_6: -893029633
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
