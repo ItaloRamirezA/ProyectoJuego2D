@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    // Varibales para las velocidades del jugador
+    // Variables para las velocidades del jugador
     public float velocidadHorizontal = 0.5f;
-    public float velocidadVertical = 0.5f;
     public float jumpForce = 2f;
 
     // Definir el layer para el suelo
     public LayerMask Suelo;
 
-    // Longitud del rayCast
+    // Longitud del raycast
     public float rayLength = 0.1f;
     Rigidbody2D rb;
 
     public Animator animator;
-
     public SpriteRenderer spriteRenderer;
+
+    private bool estaEnSuelo;
+
     void Start()
     {   
         rb = GetComponent<Rigidbody2D>();
@@ -29,53 +30,56 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {   
         float inputMovimientoHorizontal = Input.GetAxis("Horizontal");
-        float inputMovimientoVertical = Input.GetAxis("Vertical");
 
+        // Verifica si el personaje esta en el suelo
+        verificarSuelo();
+        
         // MOVIMIENTO
         movimientoLateral(inputMovimientoHorizontal);
         salto();
         gestionarGiro(inputMovimientoHorizontal);
     }
 
+    void verificarSuelo()
+    {
+        // Posición desde donde lanzo el raycast hacia abajo
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, Suelo);
+        // Si el hit.collider es null, no detecta nada por ende no esta en el suelo
+        estaEnSuelo = hit.collider != null;
+    }
+
     // -------------------------- MOVIMIENTO INICIO --------------------------
     void movimientoLateral(float movHorizontal) {
         rb.velocity = new Vector2(movHorizontal * velocidadHorizontal, rb.velocity.y);
-        if (movHorizontal != 0) { // Distinto de 0 en input es moviendose
-            // Me estoy moviendo
+        
+        // Activa la animación de correr solo si el personaje está en el suelo
+        if (movHorizontal != 0 && estaEnSuelo) { 
             animator.SetBool("corriendo", true);
         } else {
-            // Estoy quieto
             animator.SetBool("corriendo", false);
         }
     }
 
     void salto() {
-        // Posición desde donde lanzo el raycast hacia abajo
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, Suelo);
-        
-        // Si el raycast golpea algo en el layer del suelo, permite el salto
-        if (hit.collider != null && Input.GetAxis("Jump") != 0) { // 1 cuando se presiona y 0 cuando no
+        // Si el personaje está en el suelo y se presiona el botón de salto
+        if (estaEnSuelo && Input.GetButtonDown("Jump")) {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
+
+        // Activa la animación de salto si el personaje no está en el suelo
+        animator.SetBool("saltando", !estaEnSuelo);
     }
 
     void gestionarGiro(float inputMovimiento) {
-        // SI el personaje se esta moviendo a la derecha
         if (inputMovimiento > 0) {
             transform.localScale = new Vector3(1, 1, 1); // Escala normal en X
-        }
-        // Si el personaje se está moviendo a la izquierda
-        else if (inputMovimiento < 0) {
+        } else if (inputMovimiento < 0) {
             transform.localScale = new Vector3(-1, 1, 1); // Invertir la escala en X
-        // Si está quiero se quedará en la última posición asignada
         }
     }
     // -------------------------- MOVIMIENTO FINAL --------------------------
 
-
-
     // -------------------------- GIZMOS INICIO --------------------------
-    //Metodo para visualizar el Raycast en la escena (opcional)
     void OnDrawGizmos(){
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + Vector3.down * rayLength);
