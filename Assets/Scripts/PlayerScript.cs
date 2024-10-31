@@ -15,9 +15,15 @@ public class PlayerScript : MonoBehaviour
     // Longitud del rayCast
     public float rayLength = 0.1f;
     Rigidbody2D rb;
+
+    public Animator animator;
+
+    public SpriteRenderer spriteRenderer;
     void Start()
     {   
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -34,6 +40,13 @@ public class PlayerScript : MonoBehaviour
     // -------------------------- MOVIMIENTO INICIO --------------------------
     void movimientoLateral(float movHorizontal) {
         rb.velocity = new Vector2(movHorizontal * velocidadHorizontal, rb.velocity.y);
+        if (movHorizontal != 0) { // Distinto de 0 en input es moviendose
+            // Me estoy moviendo
+            animator.SetBool("corriendo", true);
+        } else {
+            // Estoy quieto
+            animator.SetBool("corriendo", false);
+        }
     }
 
     void salto() {
