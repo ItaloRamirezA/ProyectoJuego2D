@@ -29,8 +29,15 @@ public class CombateJugador : MonoBehaviour
         animator.SetTrigger("Golpe");
         StartCoroutine(perderControl());
         movimientoJugador.rebote(posicion);
+        desactivarColision();
     }
 
+    private IEnumerator desactivarColision() {
+        Physics2D.IgnoreLayerCollision(6, 8, true);
+        yield return new WaitForSeconds(tiempoPerdidaControl);
+        Physics2D.IgnoreLayerCollision(6, 8, false);
+    }
+    
     private IEnumerator perderControl() {
         movimientoJugador.sePuedeMover = false;
         yield return new WaitForSeconds(tiempoPerdidaControl);
