@@ -65,8 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\CombateJugador.cs" />
     <Compile Include="Assets\Scripts\SeguirJugadorSuelo.cs" />
     <Compile Include="Assets\Scripts\SeguirJugadorVolador.cs" />
+    <Compile Include="Assets\Scripts\EnemigoScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

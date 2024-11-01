@@ -8,8 +8,11 @@ public class SeguirJugadorSuelo : MonoBehaviour
     Transform transformJugador;
     public float velocidadMovimiento;
     public float distanciaMaxima;
+
     public Vector3 puntoInicial;
+
     public bool mirandoDerecha;
+
     public Rigidbody2D rb;
     public Animator animator;
     
@@ -84,7 +87,7 @@ public class SeguirJugadorSuelo : MonoBehaviour
         
         girarAObjetivo(puntoInicial);
 
-        if (Vector2.Distance(transform.position, puntoInicial) < 0.1f) {
+        if (Vector2.Distance(transform.position, puntoInicial) < 0.2f) {
             rb.velocity = Vector2.zero;
 
             animator.SetBool("corriendo", false);

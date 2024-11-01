@@ -21,6 +21,8 @@ public class PlayerScript : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     private bool estaEnSuelo;
+    public bool sePuedeMover = true;
+    public Vector2 velocidadRebote;
 
     void Start()
     {   
@@ -50,7 +52,9 @@ public class PlayerScript : MonoBehaviour
     }
 
     void movimientoLateral(float movHorizontal) {
-        rb.velocity = new Vector2(movHorizontal * velocidadHorizontal, rb.velocity.y);
+        if (sePuedeMover) {
+            rb.velocity = new Vector2(movHorizontal * velocidadHorizontal, rb.velocity.y);
+        }
         
         // Activa la animación de correr solo si el personaje está en el suelo
         if (movHorizontal != 0 && estaEnSuelo) { 
@@ -62,14 +66,19 @@ public class PlayerScript : MonoBehaviour
 
     void salto() {
         // Si el personaje está en el suelo y se presiona el botón de salto
-        if (estaEnSuelo && Input.GetButtonDown("Jump")) {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        if (sePuedeMover) {
+            if (estaEnSuelo && Input.GetButtonDown("Jump")) {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
         }
-
+        
         // También verifica si puede saltar de una pared
-        if (!estaEnSuelo && Input.GetButtonDown("Jump") && puedeSaltarDePared()) {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        if (sePuedeMover) {
+            if (!estaEnSuelo && Input.GetButtonDown("Jump") && puedeSaltarDePared()) {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
         }
+        
 
         // Activa la animación de salto si el personaje no está en el suelo
         animator.SetBool("saltando", !estaEnSuelo);
@@ -83,6 +92,10 @@ public class PlayerScript : MonoBehaviour
 
         // Si detecta una colisión en la izquierda o en la derecha, retorna true
         return hitIzquierda.collider != null || hitDerecha.collider != null;
+    }
+
+    public void rebote(Vector2 puntoGolpe) {
+        rb.velocity = new Vector2(-velocidadRebote.x * puntoGolpe.x, velocidadRebote.y);
     }
 
     void gestionarGiro(float inputMovimiento) {
