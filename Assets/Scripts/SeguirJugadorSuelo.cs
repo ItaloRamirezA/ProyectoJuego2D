@@ -10,9 +10,10 @@ public class SeguirJugadorSuelo : MonoBehaviour
     public float distanciaMaxima;
     public Vector3 puntoInicial;
     public bool mirandoDerecha;
-    public EstadosMovimiento estadoActual;
     public Rigidbody2D rb;
     public Animator animator;
+    
+    public EstadosMovimiento estadoActual;
     public enum EstadosMovimiento {Esperando, Siguiendo, Volviendo};
 
     void Start()
@@ -83,9 +84,11 @@ public class SeguirJugadorSuelo : MonoBehaviour
         
         girarAObjetivo(puntoInicial);
 
-        if (Vector2.Distance(transform.position, puntoInicial) < 0.01f) {
+        if (Vector2.Distance(transform.position, puntoInicial) < 0.05f) {
             rb.velocity = Vector2.zero;
-            animator.SetBool("corriendo", true);
+
+            animator.SetBool("corriendo", false);
+            
             estadoActual = EstadosMovimiento.Esperando;
         }
     }
