@@ -67,7 +67,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         // También verifica si puede saltar de una pared
-        if (!estaEnSuelo && Input.GetButtonDown("Jump") && PuedeSaltarDePared()) {
+        if (!estaEnSuelo && Input.GetButtonDown("Jump") && puedeSaltarDePared()) {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
@@ -75,8 +75,7 @@ public class PlayerScript : MonoBehaviour
         animator.SetBool("saltando", !estaEnSuelo);
     }
 
-    // Método para verificar si el jugador puede saltar de una pared
-    bool PuedeSaltarDePared()
+    bool puedeSaltarDePared()
     {
         // Raycast a la izquierda y a la derecha para verificar si hay una pared
         RaycastHit2D hitIzquierda = Physics2D.Raycast(transform.position, Vector2.left, wallRayLength, Paredes);

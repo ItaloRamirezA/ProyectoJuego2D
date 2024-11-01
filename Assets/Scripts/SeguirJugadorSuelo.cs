@@ -84,7 +84,7 @@ public class SeguirJugadorSuelo : MonoBehaviour
         
         girarAObjetivo(puntoInicial);
 
-        if (Vector2.Distance(transform.position, puntoInicial) < 0.05f) {
+        if (Vector2.Distance(transform.position, puntoInicial) < 0.1f) {
             rb.velocity = Vector2.zero;
 
             animator.SetBool("corriendo", false);
