@@ -65,7 +65,7 @@ public class SeguirJugadorSuelo : MonoBehaviour
             rb.velocity = new Vector2(-velocidadMovimiento, rb.velocity.y);
         }
 
-        girarAObjetivo(transform.position);
+        girarAObjetivo(transformJugador.position);
 
         if (Vector2.Distance(transform.position, puntoInicial) > distanciaMaxima ||
             Vector2.Distance(transform.position, transformJugador.position) > distanciaMaxima) {

@@ -15,6 +15,7 @@ public class SeguirJugadorVolador : MonoBehaviour
 
     void Start()
     {   
+        // Punto inicial es la posicion del enemigo
         puntoInicial = transform.position;
     }
 
@@ -54,7 +55,7 @@ public class SeguirJugadorVolador : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, transformJugador.position, velocidadMovimiento * Time.deltaTime);
 
-        girarAObjetivo(transform.position);
+        girarAObjetivo(transformJugador.position);
 
         if (Vector2.Distance(transform.position, puntoInicial) > distanciaMaxima ||
             Vector2.Distance(transform.position, transformJugador.position) > distanciaMaxima) {
