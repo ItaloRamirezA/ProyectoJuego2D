@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 44003abc979be6641801ce91e2fdb814
+guid: b249a92fe00d1d448b57d71f394383e0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FinnDEAD_0
+      name: dano_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 7
         y: 3
-        width: 18
-        height: 8
+        width: 19
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6deb318af341dad4888ba6dde6db65ea
-      internalID: -1143365425
+      spriteID: 06fdb0231af1a2644a53b5fbcb5111b1
+      internalID: 506643049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FinnDEAD_1
+      name: dano_2
       rect:
         serializedVersion: 2
-        x: 35
+        x: 39
         y: 3
-        width: 18
-        height: 9
+        width: 19
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,29 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 005108c22a382d047b43bf097015bd71
-      internalID: 400991918
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FinnDEAD_2
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 3
-        width: 18
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4498463b2c4de37418095ba3c350e99a
-      internalID: -223559409
+      spriteID: 50f012d616cad5c4a9d5baf664353897
+      internalID: -317715404
       vertices: []
       indices: 
       edges: []
@@ -183,9 +162,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FinnDEAD_0: -1143365425
-      FinnDEAD_1: 400991918
-      FinnDEAD_2: -223559409
+      dano_0: 506643049
+      dano_1: 131667357
+      dano_2: -317715404
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

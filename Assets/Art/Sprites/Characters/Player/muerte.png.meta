@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 012f2f33c697aba4e98ee7db668cb07f
+guid: 33bd24b2cce9b414cb51f62013653d55
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FinnATTACK_0
+      name: muerte_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 5
         y: 3
-        width: 26
-        height: 18
+        width: 19
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d09be7aff46b1e41b0897c813ed745f
-      internalID: 2111212241
+      spriteID: a7d79913bb539f84a9f04502fb74af90
+      internalID: 1347137820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FinnATTACK_1
+      name: muerte_1
       rect:
         serializedVersion: 2
-        x: 35
+        x: 38
         y: 3
-        width: 26
+        width: 15
         height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a8c29dd828a6c1479d22af87fa539d3
-      internalID: 640356055
+      spriteID: cbf1b711a1cc78d47a51fb2933a00f67
+      internalID: 1698566486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FinnATTACK_2
+      name: muerte_2
       rect:
         serializedVersion: 2
-        x: 67
+        x: 73
         y: 3
-        width: 25
-        height: 18
+        width: 18
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8abc0c3df16c9774f8e7a110085938f6
-      internalID: 1479944916
+      spriteID: 9d52d27b316e12f47bc379430cb07b09
+      internalID: -1058543275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 3
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2724ec71f87a5cd478f2900f5e7e9b9b
+      internalID: 753125675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muerte_4
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 3
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc92009df45f8b47ba0eec90449d87f
+      internalID: 139681411
       vertices: []
       indices: 
       edges: []
@@ -183,9 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FinnATTACK_0: 2111212241
-      FinnATTACK_1: 640356055
-      FinnATTACK_2: 1479944916
+      muerte_0: 1347137820
+      muerte_1: 1698566486
+      muerte_2: -1058543275
+      muerte_3: 753125675
+      muerte_4: 139681411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

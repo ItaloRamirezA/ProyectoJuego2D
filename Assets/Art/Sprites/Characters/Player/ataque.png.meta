@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3247093f03c09c548bf98f0ebf93a0bc
+guid: cebe76637cd523c41a3f0f8a38325e84
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,85 +110,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FinnDAMAGE_0
+      name: ataque_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 1
         y: 3
-        width: 19
-        height: 22
+        width: 14
+        height: 19
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b89ca09e0c8df94b86870bfe7ced34f
-      internalID: -2046218133
+      spriteID: 1123b6e782a4a5f4fbad7bc3ce8e232d
+      internalID: 1645311130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FinnDAMAGE_2
+      name: ataque_1
       rect:
         serializedVersion: 2
-        x: 41
+        x: 34
         y: 3
-        width: 19
-        height: 22
+        width: 13
+        height: 19
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4074c598e222e3c4da84102f2ed8ab46
-      internalID: 2129488785
+      spriteID: bc1b741e55e46454f9160d33cace062e
+      internalID: -1930383931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FinnDAMAGE_3
+      name: ataque_2
       rect:
         serializedVersion: 2
-        x: 73
+        x: 65
         y: 3
-        width: 19
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb0bafae0928a4046b46815b51384322
-      internalID: 1216020740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FinnDAMAGE_4
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 3
-        width: 15
+        width: 26
         height: 18
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5060093cbe2694d4b97602c686376110
-      internalID: 2084109965
+      spriteID: 99074ffdd0449bc488e226d4274ddae1
+      internalID: 501651410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataque_3
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 3
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5f1d1418dce3148b79875ee1d50617
+      internalID: -2115261638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ataque_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 3
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2839e54fe34ed04681c80ed96b730d4
+      internalID: -2106270917
       vertices: []
       indices: 
       edges: []
@@ -204,11 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FinnDAMAGE_0: -2046218133
-      FinnDAMAGE_1: -1201092704
-      FinnDAMAGE_2: 2129488785
-      FinnDAMAGE_3: 1216020740
-      FinnDAMAGE_4: 2084109965
+      ataque_0: 1645311130
+      ataque_1: -1930383931
+      ataque_2: 501651410
+      ataque_3: -2115261638
+      ataque_4: -2106270917
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
