@@ -35,7 +35,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: caminando
+    m_ConditionEvent: corriendo
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1989650046517604592}
@@ -58,7 +58,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EsqueletoIdleAnim
+  m_Name: EsqueletoAttackAnim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -71,7 +71,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ffc7a83dff603ea4e8bd213d5a1da881, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7fedeb841ade0ea4baab246234b69daf, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -88,16 +88,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -1989650046517604592}
-    m_Position: {x: 370, y: 50, z: 0}
+    m_Position: {x: 390, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7602501590804057614}
     m_Position: {x: 110, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5554713318344070264}
-    m_Position: {x: 60, y: 140, z: 0}
+    m_Position: {x: 620, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2424579231400167872}
-    m_Position: {x: 370, y: 130, z: 0}
+    m_Position: {x: 390, y: 130, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -142,7 +142,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EsqueletoAttackAnim
+  m_Name: EsqueletoIdleAnim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -156,7 +156,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7fedeb841ade0ea4baab246234b69daf, type: 2}
+  m_Motion: {fileID: 7400000, guid: ffc7a83dff603ea4e8bd213d5a1da881, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -171,7 +171,7 @@ AnimatorController:
   m_Name: Esqueleto
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: caminando
+  - m_Name: corriendo
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -199,7 +199,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: caminando
+    m_ConditionEvent: corriendo
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2424579231400167872}
