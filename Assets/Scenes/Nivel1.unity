@@ -7174,6 +7174,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   menuMuerte: {fileID: 654946528}
+  saltoSonido: {fileID: 8300000, guid: 6d6fa4f5f6fce994c884d1b0a3443d2a, type: 3}
 --- !u!1 &1030301907
 GameObject:
   m_ObjectHideFlags: 3

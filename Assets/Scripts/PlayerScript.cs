@@ -102,6 +102,7 @@ public class PlayerScript : MonoBehaviour
         // Si el personaje está en el suelo y se presiona el botón de salto
         if (sePuedeMover && !haMuerto) {
             if (estaEnSuelo && Input.GetButtonDown("Jump")) {
+                ControladorSonidos.Instance.ejecutarSonido(saltoSonido);
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
         }
@@ -109,6 +110,7 @@ public class PlayerScript : MonoBehaviour
         // También verifica si puede saltar de una pared
         if (sePuedeMover  && !haMuerto) {
             if (!estaEnSuelo && Input.GetButtonDown("Jump") && puedeSaltarDePared()) {
+                ControladorSonidos.Instance.ejecutarSonido(saltoSonido);
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
         }
