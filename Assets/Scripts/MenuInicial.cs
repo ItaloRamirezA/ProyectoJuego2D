@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class MenuInicial : MonoBehaviour
     }
 
     public void salir() {
+        Console.Write("SALIR DEL PROGRAMA");
         Application.Quit();
     }
 }
