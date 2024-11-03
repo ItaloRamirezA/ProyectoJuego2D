@@ -34,6 +34,7 @@ public class PlayerScript : MonoBehaviour
     private PlayerScript movimientoJugador;
     public float tiempoPerdidaControl;
     public UnityEvent<int> cambioVida;
+    public GameObject menuMuerte;
     
 
     void Start()
@@ -61,6 +62,9 @@ public class PlayerScript : MonoBehaviour
         salto();
         gestionarGiro(inputMovimientoHorizontal);
 
+        if (haMuerto) {
+            menuMuerte.SetActive(true);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other) {
