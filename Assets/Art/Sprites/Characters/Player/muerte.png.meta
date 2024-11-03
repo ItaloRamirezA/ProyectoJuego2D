@@ -118,9 +118,13 @@ TextureImporter:
         width: 19
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -8.5, y: -11}
+        - {x: -8.5, y: 9}
+        - {x: 5.5, y: 9}
+        - {x: 5.5, y: -11}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -137,11 +141,15 @@ TextureImporter:
         x: 38
         y: 3
         width: 15
-        height: 18
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -7.5, y: -11}
+        - {x: -7.5, y: 7}
+        - {x: 7.5, y: 7}
+        - {x: 7.5, y: -11}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -158,11 +166,15 @@ TextureImporter:
         x: 73
         y: 3
         width: 18
-        height: 8
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -9, y: -11}
+        - {x: -9, y: -3}
+        - {x: 9, y: -3}
+        - {x: 9, y: -11}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -179,11 +191,15 @@ TextureImporter:
         x: 105
         y: 3
         width: 18
-        height: 9
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -9, y: -11}
+        - {x: -9, y: -2}
+        - {x: 9, y: -2}
+        - {x: 9, y: -11}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -200,11 +216,15 @@ TextureImporter:
         x: 137
         y: 3
         width: 18
-        height: 8
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -9, y: -11}
+        - {x: -9, y: -2}
+        - {x: 9, y: -2}
+        - {x: 9, y: -11}
       physicsShape: []
       tessellationDetail: 0
       bones: []
