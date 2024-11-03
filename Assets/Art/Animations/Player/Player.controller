@@ -37,6 +37,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: corriendo
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: muerte
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2358659186743328260}
   m_Solo: 0
@@ -60,7 +63,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: saltando
+    m_ConditionEvent: muerte
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3434895862319531918}
@@ -127,7 +130,7 @@ AnimatorStateTransition:
     m_ConditionEvent: corriendo
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: saltando
+    m_ConditionEvent: muerte
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2358659186743328260}
@@ -208,6 +211,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: Golpe
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: muerte
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4278290454612816530}
@@ -327,8 +333,8 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: saltando
+  - m_ConditionMode: 2
+    m_ConditionEvent: muerte
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1042740514141597125}
@@ -408,8 +414,8 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: corriendo
     m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: saltando
+  - m_ConditionMode: 2
+    m_ConditionEvent: muerte
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1042740514141597125}
@@ -435,6 +441,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: corriendo
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: muerte
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3434895862319531918}

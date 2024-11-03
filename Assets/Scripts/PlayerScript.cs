@@ -142,6 +142,7 @@ public class PlayerScript : MonoBehaviour
         }
         cambioVida.Invoke(vidaActual);
         if (vidaActual <= 0) {
+            haMuerto = true;
             animator.SetBool("muerte", true);
         }
     }
