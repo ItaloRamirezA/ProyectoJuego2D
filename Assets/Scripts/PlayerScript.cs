@@ -64,7 +64,7 @@ public class PlayerScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Vacio")) {
-            
+            transform.position = new Vector3(0, 0, transform.position.z);
         }
     }
 
