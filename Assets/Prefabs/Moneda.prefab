@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntaje: {fileID: 0}
+  recoger: {fileID: 8300000, guid: 84631182318067b4c978f26d17936894, type: 3}
 --- !u!95 &3060430254131254010
 Animator:
   serializedVersion: 5

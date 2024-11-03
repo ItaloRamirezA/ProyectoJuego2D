@@ -35,6 +35,9 @@ public class PlayerScript : MonoBehaviour
     public float tiempoPerdidaControl;
     public UnityEvent<int> cambioVida;
     public GameObject menuMuerte;
+
+    // Audio
+    public AudioClip saltoSonido;
     
 
     void Start()
