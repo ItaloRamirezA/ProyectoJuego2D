@@ -24,10 +24,19 @@ public class PlayerScript : MonoBehaviour
     public bool sePuedeMover = true;
     public Vector2 velocidadRebote;
 
+    // Para el combate
+    public float vida;
+    private PlayerScript movimientoJugador;
+    public float tiempoPerdidaControl;
+    
+
     void Start()
     {   
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+
+        movimientoJugador = GetComponent<PlayerScript>();
         animator = GetComponent<Animator>();
     }
 
@@ -44,6 +53,7 @@ public class PlayerScript : MonoBehaviour
         gestionarGiro(inputMovimientoHorizontal);
     }
 
+    // -------------------------- MOVIMIENTO INICIO -------------------------- 
     void verificarSuelo() {
         // Posición desde donde lanzo el raycast hacia abajo
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, Suelo);
@@ -105,6 +115,33 @@ public class PlayerScript : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1); // Invertir la escala en X
         }
     }
+    // -------------------------- MOVIMIENTO FINAL -------------------------- 
+
+    // -------------------------- COMBATE INICIO -------------------------- 
+    public void tomarDano(float dano) {
+        vida -= dano;
+    }
+
+    public void tomarDano(float dano, Vector2 posicion) {
+        vida -= dano;
+        animator.SetTrigger("Golpe");
+        StartCoroutine(perderControl());
+        movimientoJugador.rebote(posicion);
+        desactivarColision();
+    }
+
+    private IEnumerator desactivarColision() {
+        Physics2D.IgnoreLayerCollision(6, 8, true);
+        yield return new WaitForSeconds(tiempoPerdidaControl);
+        Physics2D.IgnoreLayerCollision(6, 8, false);
+    }
+    
+    private IEnumerator perderControl() {
+        movimientoJugador.sePuedeMover = false;
+        yield return new WaitForSeconds(tiempoPerdidaControl);
+        movimientoJugador.sePuedeMover = true;
+    }
+    // -------------------------- COMBATE FINAL -------------------------- 
 
     // -------------------------- GIZMOS INICIO -------------------------- 
     void OnDrawGizmos() {
