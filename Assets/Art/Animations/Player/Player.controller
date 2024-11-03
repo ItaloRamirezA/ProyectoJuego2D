@@ -65,6 +65,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: muerte
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: saltando
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3434895862319531918}
   m_Solo: 0
@@ -335,6 +338,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 2
     m_ConditionEvent: muerte
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: saltando
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1042740514141597125}

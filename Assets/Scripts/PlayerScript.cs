@@ -65,6 +65,7 @@ public class PlayerScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Vacio")) {
             transform.position = new Vector3(0, 0, transform.position.z);
+            
         }
     }
 
@@ -146,7 +147,9 @@ public class PlayerScript : MonoBehaviour
         } else {
             vidaActual = vidaTemporal;
         }
+        
         cambioVida.Invoke(vidaActual);
+
         if (vidaActual <= 0) {
             haMuerto = true;
             animator.SetBool("muerte", true);
