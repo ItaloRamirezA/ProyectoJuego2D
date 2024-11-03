@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -25,9 +27,11 @@ public class PlayerScript : MonoBehaviour
     public Vector2 velocidadRebote;
 
     // Para el combate
-    public float vida;
+    public int vidaActual;
+    public int vidaMaxima;
     private PlayerScript movimientoJugador;
     public float tiempoPerdidaControl;
+    public UnityEvent<int> cambioVida;
     
 
     void Start()
@@ -38,6 +42,9 @@ public class PlayerScript : MonoBehaviour
 
         movimientoJugador = GetComponent<PlayerScript>();
         animator = GetComponent<Animator>();
+
+        vidaActual = vidaMaxima;
+        cambioVida.Invoke(vidaActual);
     }
 
     void Update()
@@ -51,6 +58,7 @@ public class PlayerScript : MonoBehaviour
         movimientoLateral(inputMovimientoHorizontal);
         salto();
         gestionarGiro(inputMovimientoHorizontal);
+
     }
 
     // -------------------------- MOVIMIENTO INICIO -------------------------- 
@@ -118,16 +126,23 @@ public class PlayerScript : MonoBehaviour
     // -------------------------- MOVIMIENTO FINAL -------------------------- 
 
     // -------------------------- COMBATE INICIO -------------------------- 
-    public void tomarDano(float dano) {
-        vida -= dano;
-    }
-
-    public void tomarDano(float dano, Vector2 posicion) {
-        vida -= dano;
+    public void tomarDano(int cantidadDano, Vector2 posicion) {
         animator.SetTrigger("Golpe");
         StartCoroutine(perderControl());
         movimientoJugador.rebote(posicion);
         desactivarColision();
+
+
+        int vidaTemporal = vidaActual - cantidadDano;
+        if (vidaTemporal < 0) {
+            vidaActual = 0;
+        } else {
+            vidaActual = vidaTemporal;
+        }
+        cambioVida.Invoke(vidaActual);
+        if (vidaActual <= 0) {
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator desactivarColision() {
