@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class PlayerScript : MonoBehaviour
     {   
         float inputMovimientoHorizontal = Input.GetAxis("Horizontal");
 
-        // Verifica si el personaje está en el suelo
+        // Verifica si el personaje esta en el suelo
         verificarSuelo();
         
         // MOVIMIENTO
@@ -65,18 +66,11 @@ public class PlayerScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Vacio")) {
             transform.position = new Vector3(0, 0, transform.position.z);
-            
+            tomarDano(1, transform.position);
         }
     }
 
     // -------------------------- MOVIMIENTO INICIO -------------------------- 
-    void verificarSuelo() {
-        // Posición desde donde lanzo el raycast hacia abajo
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, Suelo);
-        // Si el hit.collider es null, no detecta nada, por ende no está en el suelo
-        estaEnSuelo = hit.collider != null;
-    }
-
     void movimientoLateral(float movHorizontal) {
         if (sePuedeMover) {
             rb.velocity = new Vector2(movHorizontal * velocidadHorizontal, rb.velocity.y);
@@ -88,6 +82,13 @@ public class PlayerScript : MonoBehaviour
         } else {
             animator.SetBool("corriendo", false);
         }
+    }
+
+    void verificarSuelo() {
+        // Posición desde donde lanzo el raycast hacia abajo
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, rayLength, Suelo);
+        // Si el hit.collider es null, no detecta nada, por ende no está en el suelo
+        estaEnSuelo = hit.collider != null;
     }
 
     void salto() {
@@ -149,7 +150,7 @@ public class PlayerScript : MonoBehaviour
         }
         
         cambioVida.Invoke(vidaActual);
-
+        
         if (vidaActual <= 0) {
             haMuerto = true;
             animator.SetBool("muerte", true);
