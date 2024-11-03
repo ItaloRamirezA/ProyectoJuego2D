@@ -72,12 +72,12 @@ public class PlayerScript : MonoBehaviour
 
     // -------------------------- MOVIMIENTO INICIO -------------------------- 
     void movimientoLateral(float movHorizontal) {
-        if (sePuedeMover) {
+        if (sePuedeMover  && !haMuerto) {
             rb.velocity = new Vector2(movHorizontal * velocidadHorizontal, rb.velocity.y);
         }
         
         // Activa la animación de correr solo si el personaje está en el suelo
-        if (movHorizontal != 0 && estaEnSuelo) { 
+        if (movHorizontal != 0 && estaEnSuelo  && !haMuerto) { 
             animator.SetBool("corriendo", true);
         } else {
             animator.SetBool("corriendo", false);
@@ -93,14 +93,14 @@ public class PlayerScript : MonoBehaviour
 
     void salto() {
         // Si el personaje está en el suelo y se presiona el botón de salto
-        if (sePuedeMover) {
+        if (sePuedeMover && !haMuerto) {
             if (estaEnSuelo && Input.GetButtonDown("Jump")) {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
         }
         
         // También verifica si puede saltar de una pared
-        if (sePuedeMover) {
+        if (sePuedeMover  && !haMuerto) {
             if (!estaEnSuelo && Input.GetButtonDown("Jump") && puedeSaltarDePared()) {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
@@ -126,9 +126,9 @@ public class PlayerScript : MonoBehaviour
     }
 
     void gestionarGiro(float inputMovimiento) {
-        if (inputMovimiento > 0) {
+        if (inputMovimiento > 0  && !haMuerto) {
             transform.localScale = new Vector3(1, 1, 1); // Escala normal en X
-        } else if (inputMovimiento < 0) {
+        } else if (inputMovimiento < 0  && !haMuerto) {
             transform.localScale = new Vector3(-1, 1, 1); // Invertir la escala en X
         }
     }
