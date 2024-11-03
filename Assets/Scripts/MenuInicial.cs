@@ -7,14 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuInicial : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
     public void jugar() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Nivel1");
     }
 
     public void salir() {
