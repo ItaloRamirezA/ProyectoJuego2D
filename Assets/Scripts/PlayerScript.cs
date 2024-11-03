@@ -24,6 +24,7 @@ public class PlayerScript : MonoBehaviour
 
     private bool estaEnSuelo;
     public bool sePuedeMover = true;
+    public bool haMuerto = false;
     public Vector2 velocidadRebote;
 
     // Para el combate
@@ -141,7 +142,7 @@ public class PlayerScript : MonoBehaviour
         }
         cambioVida.Invoke(vidaActual);
         if (vidaActual <= 0) {
-            Destroy(gameObject);
+            animator.SetBool("muerte", true);
         }
     }
 
