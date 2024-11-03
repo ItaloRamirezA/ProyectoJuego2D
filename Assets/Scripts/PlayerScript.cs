@@ -38,6 +38,7 @@ public class PlayerScript : MonoBehaviour
 
     // Audio
     public AudioClip saltoSonido;
+    public AudioClip muerteSonido;
     
 
     void Start()
@@ -163,6 +164,10 @@ public class PlayerScript : MonoBehaviour
         if (vidaActual <= 0) {
             haMuerto = true;
             animator.SetBool("muerte", true);
+        }
+
+        if (haMuerto) {
+            ControladorSonidos.Instance.ejecutarSonido(muerteSonido);
         }
     }
 
