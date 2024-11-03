@@ -15,6 +15,7 @@ public class SeguirJugadorSuelo : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
+    public PlayerScript playerScript;
     
     public EstadosMovimiento estadoActual;
     public enum EstadosMovimiento {Esperando, Siguiendo, Volviendo};
@@ -37,7 +38,11 @@ public class SeguirJugadorSuelo : MonoBehaviour
                         estadoEsperando();
                         break;
                     case EstadosMovimiento.Siguiendo:
-                        estadoSiguiendo();
+                        if (playerScript.haMuerto) {
+                            estadoVolviendo();
+                        } else {
+                            estadoSiguiendo();
+                        }
                         break;
                     case EstadosMovimiento.Volviendo:
                         estadoVolviendo();

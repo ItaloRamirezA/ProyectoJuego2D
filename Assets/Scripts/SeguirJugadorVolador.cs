@@ -10,6 +10,7 @@ public class SeguirJugadorVolador : MonoBehaviour
     public float distanciaMaxima;
     public Vector3 puntoInicial;
     public bool mirandoDerecha;
+    public PlayerScript playerScript;
     public EstadosMovimiento estadoActual;
     public enum EstadosMovimiento {Esperando, Siguiendo, Volviendo};
 
@@ -30,7 +31,11 @@ public class SeguirJugadorVolador : MonoBehaviour
                         estadoEsperando();
                         break;
                     case EstadosMovimiento.Siguiendo:
-                        estadoSiguiendo();
+                        if (playerScript.haMuerto) {
+                            estadoVolviendo();
+                        } else {
+                            estadoSiguiendo();
+                        }
                         break;
                     case EstadosMovimiento.Volviendo:
                         estadoVolviendo();

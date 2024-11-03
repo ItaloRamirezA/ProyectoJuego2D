@@ -6840,7 +6840,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 400
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -6877,6 +6877,7 @@ MonoBehaviour:
   mirandoDerecha: 1
   rb: {fileID: 0}
   animator: {fileID: 0}
+  playerScript: {fileID: 921498284}
   estadoActual: 0
 --- !u!114 &877772116
 MonoBehaviour:
@@ -7096,6 +7097,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
   sePuedeMover: 1
+  haMuerto: 0
   velocidadRebote: {x: 1, y: 3}
   vidaActual: 0
   vidaMaxima: 3
@@ -7440,6 +7442,7 @@ MonoBehaviour:
   distanciaMaxima: 1.5
   puntoInicial: {x: 0, y: 0, z: 0}
   mirandoDerecha: 0
+  playerScript: {fileID: 921498284}
   estadoActual: 0
 --- !u!114 &1229869232
 MonoBehaviour:
